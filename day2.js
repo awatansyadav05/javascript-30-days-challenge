@@ -61,4 +61,4 @@ console.log(ans);
 //activity 4: ternany operators
 
 ans= a>=0? 
-console.log("positive") : console.log("negative");;
+console.log("positive") : console.log("negative");
