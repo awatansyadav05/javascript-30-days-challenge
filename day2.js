@@ -58,7 +58,7 @@ console.log(ans);
 ans= !(a>48 || b<=56)
 console.log(ans);
 
-//activity 4: ternany operators
+//activity 4: ternany operators is the shorten of if-else statement
 
 ans= a>=0? 
 console.log("positive") : console.log("negative");
