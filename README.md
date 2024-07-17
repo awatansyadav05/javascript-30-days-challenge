@@ -6,4 +6,8 @@ Day2: Operators
 
 Day3: Control Structures
 
+Day4: Loops
+
+Day5: Functions
+
 
