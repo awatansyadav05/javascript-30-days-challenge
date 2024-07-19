@@ -1,4 +1,4 @@
-//Arrays
+//DAY6 Arrays
 //Activity 1: Array Creation and access
 //task 1;
 let arr = [1, 2, 3, 4, 5];
