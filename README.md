@@ -10,4 +10,6 @@ Day4: Loops
 
 Day5: Functions
 
+Day6: Arrays
+
 
