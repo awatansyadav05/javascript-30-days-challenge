@@ -12,4 +12,6 @@ Day5: Functions
 
 Day6: Arrays
 
+Day7: Objects 
+
 
