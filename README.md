@@ -14,4 +14,6 @@ Day6: Arrays
 
 Day7: Objects 
 
+Day8: ES6+ Features
+
 
