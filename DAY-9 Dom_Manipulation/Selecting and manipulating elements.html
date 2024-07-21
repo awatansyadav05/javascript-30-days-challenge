@@ -1,0 +1,33 @@
+//DAY9 DOM manipulation<br>
+//Activity 1: Selecting and manipulating elements<br>
+//Task 1'<br>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM manipulation</title>
+</head>
+<body>
+  <div id="content" >
+    Hello World!
+  </div>
+  <button id="changeTextButton" > Change text </button>
+  <script>
+     document.getElementById("changeTextButton").addEventListener("click", function() {
+            document.getElementById("content").textContent = "Hello, DOM!";
+        });
+  </script>
+  <br>
+
+  /*This is task 2*/
+  
+  <h1 class="changeBgColor">this is text with white background</h1>
+ <script>
+    document.getElementsByClassName("changeBgColor")[0].style.backgroundColor="red";
+  </script>
+
+
+
+</body>
+</html>
