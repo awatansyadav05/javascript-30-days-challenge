@@ -1,0 +1,24 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard event Listener</title>
+  </head>
+  <body>
+    <input id="myInput" type="text" placeholder="text here something" >
+    <p id="displayValue" > Current Value:</p>
+    <script>
+      document.addEventListener('DOMContentLoaded',(event)=>{
+        const inputfield= document.getElementById('myInput')
+        const displayValue=document.getElementById('displayValue')
+        inputfield.addEventListener('keydown', (event)=>{
+          console.log(`key pressed: ${event.key}`);
+        })
+        inputfield.addEventListener('keyup', (event)=>{
+          console.log(`current value : ${inputfield.value}`);
+        })
+      })
+    </script> 
+  </body>
+  </html>

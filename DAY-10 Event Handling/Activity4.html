@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Example</title>
+</head>
+<body>
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <button type="submit">Submit</button>
+    </form>
+    <label for="mySelect">Choose an option:</label>
+    <select id="mySelect">
+        <option value="" disabled selected>Select an option</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+    </select>
+
+    <p id="selectedValue">Selected value will appear here.</p>
+
+    <script>
+        // Form submit event listener
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from being submitted
+
+            const formData = new FormData(event.target); // Create FormData object from the form
+            const data = Object.fromEntries(formData.entries()); // Convert FormData to a plain object
+
+            console.log(data); // Log the form data
+        });
+
+        // Select change event listener
+        document.getElementById('mySelect').addEventListener('change', function() {
+            const selectedValue = this.value; // Get the selected value
+            document.getElementById('selectedValue').textContent = `Selected value: ${selectedValue}`; // Display the selected value
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>change background</title>
+</head>
+<body>
+  <button id="Anotherbutton" >
+    Click me!
+  </button>
+  
+  <script >
+  document.addEventListener('DOMContentLoaded', (event)=>{
+  const button=document.getElementById('Anotherbutton');
+  button.addEventListener('mouseover', () =>{
+    button.style.backgroundColor="red"
+  })
+  button.addEventListener('mouseout', ()=>{
+    button.style.backgroundColor=""
+  })
+})
+  </script>
+</body>
+</html>

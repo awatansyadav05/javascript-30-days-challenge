@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation Example</title>
+    <style>
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            cursor: pointer;
+            padding: 8px;
+            border: 1px solid #ddd;
+            margin-bottom: 4px;
+        }
+        li:hover {
+            background-color: #f0f0f0;
+        }
+        .dynamic-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .dynamic-list li {
+            cursor: pointer;
+            padding: 8px;
+            border: 1px solid #ddd;
+            margin-bottom: 4px;
+        }
+        .dynamic-list li:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <ul id="myList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul>
+    <button id="addItemButton">Add Item</button>
+    <ul id="dynamicList" class="dynamic-list">
+        <!-- Dynamic items will be added here -->
+    </ul>
+
+    <script>
+        // Attach a single event listener to the parent <ul> element
+          const dynamicList = document.getElementById('dynamicList');
+        const addItemButton = document.getElementById('addItemButton');
+
+        document.getElementById('myList').addEventListener('click', function(event) {
+            // Check if the clicked element is an <li> element
+            if (event.target && event.target.tagName === 'LI') {
+                console.log('Clicked item content:', event.target.textContent);
+            }
+        });
+        function addNewItem() {
+            const newItem = document.createElement('li');
+            newItem.textContent = `Item ${dynamicList.children.length + 1}`;
+            dynamicList.appendChild(newItem);
+        }
+
+        // Event delegation: handle clicks on dynamically added <li> elements
+        dynamicList.addEventListener('click', function(event) {
+            if (event.target && event.target.tagName === 'LI') {
+                alert(`Clicked item content: ${event.target.textContent}`);
+            }
+        });
+
+        // Add click event listener to the button to add new items
+        addItemButton.addEventListener('click', addNewItem);
+
+    </script>
+</body>
+</html>
