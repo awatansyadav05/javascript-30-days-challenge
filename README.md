@@ -18,6 +18,9 @@ Day8: ES6+ Features
 
 Day9: DOM Manipulation
 
+<<<<<<< HEAD
 Day10: Event Handling
 
+=======
+>>>>>>> 2264f4fb8affe12b8fcf20ed751182abd3c5fb6b
 
