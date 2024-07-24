@@ -20,5 +20,7 @@ Day9: DOM Manipulation
 
 Day10: Event Handling
 
+Day11: Promises and Async/Await
+
 
 
