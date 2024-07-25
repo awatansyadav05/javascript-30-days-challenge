@@ -22,5 +22,7 @@ Day10: Event Handling
 
 Day11: Promises and Async/Await
 
+Day12: Error Handling
+
 
 
