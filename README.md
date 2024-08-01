@@ -32,10 +32,4 @@ Day15:Closure
 
 Day16: Recursion
 
-Day 20: Local Storage and Session Storage 
-<h3> In this assessment kindly in the activity 1 and 3, paste the code in the browser (ctlr+ shift+I) in the console so that the proper output you get.</h3>
-
-
-
-
 
