@@ -32,4 +32,10 @@ Day15:Closure
 
 Day16: Recursion
 
+Day17: Data Structres
 
+Day18: Alogrithms
+
+Day19: Regular Expression 
+
+Day 20: Storage Operations
