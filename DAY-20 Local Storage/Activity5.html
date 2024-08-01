@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Storage Operations</title>
+</head>
+<script>
+  function saveToBothStorages(key,value){
+    localStorage.setItem(key,value)
+    sessionStorage.setItem(key,value)
+
+    const localStorageValue = localStorage.getItem(key)
+    const sessionStorageValue = sessionStorage.getItem(key)
+    console.log(`value in localStroage for key "${key}": ${localStorageValue}`);
+    console.log(`value in sessionStroage for key "${key}": ${sessionStorageValue}`);
+  }
+  saveToBothStorages('examplekey', 'examplevalue');
+</script>
+<body>
+  <h1> Stroage Operations</h1>
+</body>
+</html>
+

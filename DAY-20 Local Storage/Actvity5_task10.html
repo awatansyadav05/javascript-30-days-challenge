@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Storage Operations</title>
+</head>
+<script>
+  function saveToBothStorages(key,value){
+    localStorage.setItem(key,value)
+    sessionStorage.setItem(key,value)
+
+    const localStorageValue = localStorage.getItem(key)
+    const sessionStorageValue = sessionStorage.getItem(key)
+    console.log(`value in localStroage for key "${key}": ${localStorageValue}`);
+    console.log(`value in sessionStroage for key "${key}": ${sessionStorageValue}`);
+  } 
+  function clearAllStroages (){
+    localStorage.clear();
+    sessionStorage.clear();
+    console.log('local stroage is empty:', localStorage.length===0);
+    console.log('session stroage is empty:', sessionStorage.length===0);
+  }
+  window.onload = function(){
+    saveToBothStorages('examplekey', 'examplevalue');
+    clearAllStroages();
+  }
+
+
+  
+</script>
+<body>
+  <h1> Stroage Operations</h1>
+  <p> check the console for the Operations</p>
+</body>
+</html>
+

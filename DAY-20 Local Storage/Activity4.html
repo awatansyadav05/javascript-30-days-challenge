@@ -1,0 +1,65 @@
+// Activity 4: Using SessionStorage
+//task 7
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Using local stroage</title>
+  <script>
+    function saveformdata (event){
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      sessionStorage.setItem('userName', name);
+      sessionStorage.setItem('userEmail', email )
+      displaySavedData();
+
+
+    }
+
+    function displaySavedData(){
+      const name = sessionStorage.getItem('userName');
+      const email = sessionStorage.getItem('userEmail')
+
+      document.getElementById('displayName').innerText= name? `Name: ${name}  `: 'Name not saved.';
+      document.getElementById('displayEmail').innerHTML=email? `Email: ${email} `: 'Email not saved';
+
+    }
+    function removeData(){
+      console.log('Before removal');
+      console.log('userName:', sessionStorage.getItem('userName'));
+      console.log('userEmail:', sessionStorage.getItem('userEmail'));
+
+      sessionStorage.removeItem('userName')
+      sessionStorage.removeItem('userEmail')
+
+      console.log('After Removal');
+      console.log('userName', sessionStorage.getItem('userName'));
+      console.log('userEmail', sessionStorage.getItem('userEmail'));
+
+      displaySavedData()
+    }
+
+    window.onload = displaySavedData;
+  </script>
+</head>
+
+<body>
+  <h1>Input user data</h1>
+  <form onsubmit="saveformdata(event)">
+    <label for="name" >Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+    <label for="email" > Email:</label>
+    <input type="email" id="email" email="email" required><br><br>
+    <button type="submit"> Save </button>
+  </form>
+
+  <h2> Saved data </h2>
+  <p id="displayName">
+
+  </p>
+  <p id="displayEmail"></p>
+  <button onclick="removeData()" >Remove Data</button>
+</body>
+</html>
