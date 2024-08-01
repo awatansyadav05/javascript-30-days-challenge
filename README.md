@@ -38,4 +38,5 @@ Day18: Alogrithms
 
 Day19: Regular Expression 
 
-Day 20: Storage Operations
+Day 20: Storage Operations //Instruction
+<h3> paste the code in the browser (ctlr+shift+I) in the console for the output </h3>
