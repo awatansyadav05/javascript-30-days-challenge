@@ -42,3 +42,6 @@ Day 20: Storage Operations //Instruction
 <h3> paste the code in the browser (ctlr+shift+I) in the console for the output </h3>
 
 DAY 21: Leetcode easy problem
+
+DAY 22: Leetcode medium problem
+**In this day i have done only 3 task group anagram, threesum and 2sum
