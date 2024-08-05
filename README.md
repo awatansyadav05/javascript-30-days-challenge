@@ -45,3 +45,9 @@ DAY 21: Leetcode easy problem
 
 DAY 22: Leetcode medium problem
 **In this day i have done only 3 task group anagram, threesum and 2sum
+
+DAY 23: Leetcode Hard Problem 
+**In this i have solve only meadian sorted array 
+
+DAY 24: Weather App using html css and js
+
