@@ -51,3 +51,5 @@ DAY 23: Leetcode Hard Problem
 
 DAY 24: Weather App using html css and js
 
+DAY 25: Movie search app
+
