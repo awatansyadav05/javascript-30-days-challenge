@@ -53,3 +53,6 @@ DAY 24: Weather App using html css and js
 
 DAY 25: Movie search app
 
+DAY-26 : Chat application
+
+DAY-27: Task management app
