@@ -1,5 +1,4 @@
 
-// Sample product data
 const products = [
   { id: 1, name: "Hat brown", price: 10.00, description: "Royal hat", imageUrl: "https://images.pexels.com/photos/35185/hats-fedora-hat-manufacture-stack.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
   { id: 2, name: "Hat elegant", price: 20.00, description: "Elgant hat", imageUrl: "https://images.pexels.com/photos/984619/pexels-photo-984619.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
@@ -8,7 +7,7 @@ const products = [
 
 const cart = [];
 
-// Function to display products
+
 function displayProducts() {
   const productList = document.getElementById('product-list');
   productList.innerHTML = '';
@@ -26,7 +25,7 @@ function displayProducts() {
   });
 }
 
-// Function to display cart items
+
 function displayCart() {
   const cartItems = document.getElementById('cart-items');
   cartItems.innerHTML = '';
@@ -49,7 +48,6 @@ function displayCart() {
   });
 }
 
-// Function to add product to cart
 function addToCart(productId) {
   const product = products.find(p => p.id === productId);
   const cartItem = cart.find(item => item.id === productId);
@@ -61,7 +59,7 @@ function addToCart(productId) {
   displayCart();
 }
 
-// Function to increase quantity
+
 function increaseQuantity(productId) {
   const cartItem = cart.find(item => item.id === productId);
   if (cartItem) {
@@ -70,7 +68,7 @@ function increaseQuantity(productId) {
   }
 }
 
-// Function to decrease quantity
+
 function decreaseQuantity(productId) {
   const cartItem = cart.find(item => item.id === productId);
   if (cartItem && cartItem.quantity > 1) {
@@ -79,7 +77,7 @@ function decreaseQuantity(productId) {
   }
 }
 
-// Function to remove product from cart
+
 function removeFromCart(productId) {
   const cartIndex = cart.findIndex(item => item.id === productId);
   if (cartIndex > -1) {
@@ -88,7 +86,7 @@ function removeFromCart(productId) {
   }
 }
 
-// Function to handle checkout
+
 function handleCheckout(event) {
   event.preventDefault();
   const name = document.getElementById('name').value;
@@ -105,7 +103,6 @@ function handleCheckout(event) {
   }
 }
 
-// Event listeners
 document.addEventListener('DOMContentLoaded', () => {
   displayProducts();
 
