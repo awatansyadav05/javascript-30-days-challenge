@@ -1,4 +1,4 @@
-// Toggle between login and registration forms
+
 function toggleForms() {
   document.getElementById('loginForm').style.display = 
       document.getElementById('loginForm').style.display === 'none' ? 'block' : 'none';
@@ -56,12 +56,10 @@ function displayDashboard() {
   document.getElementById('profileEmail').innerText = loggedInUser.email;
   document.getElementById('profilePic').src = loggedInUser.profilePic || 'https://via.placeholder.com/100';
 
-  // Load existing posts and notifications
+  
   displayPosts();
   displayNotifications();
 }
-
-// Update Profile Picture and Information
 function updateProfile() {
   const fileInput = document.getElementById('updateProfilePic');
   if (fileInput.files && fileInput.files[0]) {
@@ -77,7 +75,6 @@ function updateProfile() {
   }
 }
 
-// Creating and Displaying Posts
 const posts = JSON.parse(localStorage.getItem('posts')) || [];
 
 document.getElementById('postButton').addEventListener('click', function() {
@@ -158,7 +155,7 @@ function commentOnPost(timestamp) {
   }
 }
 
-// Notifications
+
 const notifications = JSON.parse(localStorage.getItem('notifications')) || [];
 
 function addNotification(message) {
@@ -180,7 +177,6 @@ function displayNotifications() {
   });
 }
 
-// Load logged-in user and posts on page load
 window.onload = function() {
   loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
   if (loggedInUser) {
